@@ -1,6 +1,6 @@
 # NorenApi
 
-Api used to connect to NorenOMS
+Api used to connect to FLATTRADE OMS
 ****
 
 ## Build
@@ -2057,19 +2057,6 @@ while(feed_opened==False):
 
 ****
 
-## Author
-
-Kumar Anand
-
-****
-
-## License
-
-Copyright (C) 2021 Kambala Solutions Pvt Ltd- All Rights Reserved
-Copying of this file, via any medium is strictly prohibited.
-Proprietary and confidential.
-All file transfers are logged.
-
-****
+ 
 
 
