@@ -21,7 +21,7 @@ to build this package and install it on your server please use
 ``` pip install -r requirements.txt ```
 
 now you can quickly check the API call with the sample file test_api.py provided in this folder.
-Before you run test_api.py, please set the usersession and userid variable in the file test_api.py
+Before you run test_api.py, please set the ```usersession``` and ```userid``` variable in the file test_api.py
 
 ****
 
