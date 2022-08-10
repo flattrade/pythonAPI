@@ -26,7 +26,6 @@ Before you run test_api.py, please set the ```usersession``` and ```userid``` va
 ****
 
 ## API 
-```NorenApi```
 
 Symbols
 - [searchscrip](#md-searchscrip)
