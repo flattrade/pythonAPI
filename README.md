@@ -1,4 +1,4 @@
-# NorenApi
+# FLATTRADE Python API
 
 Api used to connect to FLATTRADE OMS
 ****
