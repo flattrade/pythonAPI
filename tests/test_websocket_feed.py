@@ -61,9 +61,13 @@ def get_time(time_string):
 #start of our program
 api = NorenApiPy()
 
-#set token
-usersession='8fea10ad126ba63f019eb89d2894c182903b8c8e18ecc739570d18e8eb6647f6'
-ret = api.set_session(userid= 'FT000069', password = '', usertoken= usersession)
+#set token and user id
+#paste the token generated using the login flow described 
+# in LOGIN FLOW of https://pi.flattrade.in/docs
+usersession='token here'
+userid = 'user id here'
+
+ret = api.set_session(userid= userid, password = '', usertoken= usersession)
 
 if ret != None:   
     ret = api.start_websocket(order_update_callback=event_handler_order_update, subscribe_callback=event_handler_quote_update, socket_open_callback=open_callback)
