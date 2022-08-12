@@ -1803,9 +1803,8 @@ Accept for t, e, and tk other fields may / may not be present.
 send a list of instruments to stop watch
 
 ****
-## <a name="md-example-basic"></a> Example - Getting Started
-First configure the endpoints in the api_helper constructor. 
-Thereon provide your credentials and login as follows.
+## <a name="md-example-basic"></a> Example - Getting Started 
+Provide your token and user id as follows.
 
 ```python
 from api_helper import NorenApiPy
@@ -1817,16 +1816,14 @@ logging.basicConfig(level=logging.DEBUG)
 #start of our program
 api = NorenApiPy()
 
-#credentials
-user        = '< user id>'
-u_pwd       = '< password >'
-factor2     = 'second factor'
-vc          = 'vendor code'
-app_key     = 'secret key'
-imei        = 'uniq identifier'
+#set token and user id
+#paste the token generated using the login flow described 
+# in LOGIN FLOW of https://pi.flattrade.in/docs
+usersession='token here'
+userid = 'user id here'
 
+ret = api.set_session(userid= userid, password = '', usertoken= usersession)
 
-ret = api.login(userid=user, password=pwd, twoFA=factor2, vendor_code=vc, api_secret=app_key, imei=imei)
 print(ret)
 ```
 
