@@ -1,6 +1,6 @@
-# FLATTRADE Python API
+# NorenApi
 
-Api used to connect to FLATTRADE OMS
+Api used to connect to NorenOMS
 ****
 
 ## Build
@@ -20,12 +20,11 @@ to build this package and install it on your server please use
 
 ``` pip install -r requirements.txt ```
 
-now you can quickly check the API call with the sample file test_api.py provided in this folder.
-Before you run test_api.py, please set the ```usersession``` and ```userid``` variable in the file test_api.py
 
 ****
 
 ## API 
+```NorenApi```
 
 Symbols
 - [searchscrip](#md-searchscrip)
@@ -1805,7 +1804,7 @@ send a list of instruments to stop watch
 ****
 ## <a name="md-example-basic"></a> Example - Getting Started
 First configure the endpoints in the api_helper constructor. 
-Thereon provide your credentials and login as follows.
+Provide your token and user id  to set session.
 
 ```python
 from api_helper import NorenApiPy
@@ -1825,8 +1824,9 @@ vc          = 'vendor code'
 app_key     = 'secret key'
 imei        = 'uniq identifier'
 
-
-ret = api.login(userid=user, password=pwd, twoFA=factor2, vendor_code=vc, api_secret=app_key, imei=imei)
+#set token
+usersession='your token'
+ret = api.set_session(userid= 'your user id', password = '', usertoken= usersession)
 print(ret)
 ```
 
@@ -2058,6 +2058,19 @@ while(feed_opened==False):
 
 ****
 
- 
+## Author
+
+Kumar Anand
+
+****
+
+## License
+
+Copyright (C) 2021 Kambala Solutions Pvt Ltd- All Rights Reserved
+Copying of this file, via any medium is strictly prohibited.
+Proprietary and confidential.
+All file transfers are logged.
+
+****
 
 
