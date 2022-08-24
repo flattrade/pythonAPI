@@ -42,7 +42,6 @@ class NorenApiPy(NorenApi):
         NorenApi.__init__(self, host='https://piconnect.flattrade.in/PiConnectTP/', websocket='wss://piconnect.flattrade.in/PiConnectWSTp/', eodhost='https://web.flattrade.in/chartApi/getdata/')
         global api
         api = self
-
     def place_basket(self, orders):
 
         resp_err = 0
@@ -63,7 +62,7 @@ class NorenApiPy(NorenApi):
 
         return result
                 
-    def place_order(self,order: Order):
+    def placeOrder(self,order: Order):
         ret = NorenApi.place_order(self, buy_or_sell=order.buy_or_sell, product_type=order.product_type,
                             exchange=order.exchange, tradingsymbol=order.tradingsymbol, 
                             quantity=order.quantity, discloseqty=order.discloseqty, price_type=order.price_type, 
