@@ -1,30 +1,65 @@
-# FLATTRADE Python API
+# 🚀 FLATTRADE Python API
 
-Api used to connect to FLATTRADE OMS
-****
+> A powerful Python interface to connect with **`FLATTRADE OMS`** – place orders, fetch quotes, stream market data, and more.
 
-## Build
-go into the project folder
+---
 
-set the environment one time
-do this one time only
-this command creates a virtual environment for project dependencies
+## 📦 Getting Started
 
-``` python -m venv venv ```
+⚡ **Start Here:** **[`Set Up Flattrade API & Generate Token Fast`](token_generator/setup.md)**
+*Step-by-step guide to install, configure, and authenticate your API connection in minutes!*
 
-load the environment (venv)
+---
 
-``` venv\Scripts\activate ```
+## 📚 API Reference
 
-to build this package and install it on your server please use 
+### 📊 Symbols
 
-``` pip install -r requirements.txt ```
+* 🔍 [`searchscrip`](#md-searchscrip) – Search instruments
+* 🧾 [`get_security_info`](#md-get_security_info) – Get instrument metadata
+* 💬 [`get_quotes`](#md-get_quotes) – Live market quotes
+* ⏱️ [`get_time_price_series`](#md-get_time_price_series) – Intraday price data
+* 📅 [`get_daily_price_series`](#md-get_daily_price_series) – Daily price history
+* 🧠 [`get_option_chain`](#md-get_optionchain) – Option chain data
 
-now you can quickly check the API call with the sample file test_api.py provided in this folder.
-Before you run test_api.py, please set the ```usersession``` and ```userid``` variable in the file test_api.py
+---
 
-****
+### 📈 Orders & Trades
 
+* 🛒 [`place_order`](#md-place_order) – Place a new order
+* ✏️ [`modify_order`](#md-modify_order) – Edit existing order
+* ❌ [`cancel_order`](#md-cancel_order) – Cancel open order
+* 🚪 [`exit_order`](#md-exit_order) – Exit existing position
+* 🔄 [`product_convertion`](#md-prd_convert) – Convert product type
+* 📑 [`get_orderbook`](#md-get_orderbook) – View all orders
+* 📘 [`get_tradebook`](#md-get_tradebook) – View all trades
+* 🧾 [`get_singleorderhistory`](#md-get_singleorderhistory) – Full order history
+
+---
+
+### 🗃️ Holdings & Limits
+
+* 📦 [`get_holdings`](#md-get_holdings) – View stock holdings
+* 📊 [`get_positions`](#md-get_positions) – Check open positions
+* 💰 [`get_limits`](#md-get_limits) – View available margins
+
+---
+
+### 🌐 WebSocket API
+
+* 🔌 [`start_websocket`](#md-start_websocket) – Initialize socket connection
+* 📡 [`subscribe`](#md-subscribe) – Subscribe to live feeds
+* 📴 [`unsubscribe`](#md-unsubscribe) – Unsubscribe from feeds
+
+---
+
+### 💡 Examples
+
+* 🚀 [`getting started`](#md-example-basic) – Quick usage demo
+* 📈 [`Market Functions`](#md-example-market) – Quote & data examples
+* 🛒 [`Orders and Trade`](#md-example-orders) – Order placement & tracking
+
+---
 ## API 
 
 Symbols
