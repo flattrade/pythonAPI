@@ -60,42 +60,6 @@
 * 🛒 [`Orders and Trade`](#md-example-orders) – Order placement & tracking
 
 ---
-## API 
-
-Symbols
-- [searchscrip](#md-searchscrip)
-- [get_security_info](#md-get_security_info)
-- [get_quotes](#md-get_quotes)
-- [get_time_price_series](#md-get_time_price_series)
-- [get_daily_price_series](#md-get_daily_price_series)
-- [get_option_chain](#md-get_optionchain)
-
-Orders and Trades
-- [place_order](#md-place_order)
-- [modify_order](#md-modify_order)
-- [cancel_order](#md-cancel_order)
-- [exit_order](#md-exit_order)
-- [product_convertion](#md-prd_convert)
-- [get_orderbook](#md-get_orderbook)
-- [get_tradebook](#md-get_tradebook)
-- [get_singleorderhistory](#md-get_singleorderhistory)
-
-Holdings and Limits
-- [get_holdings](#md-get_holdings)
-- [get_positions](#md-get_positions)
-- [get_limits](#md-get_limits)
-
-Websocket API
-- [start_websocket](#md-start_websocket)
-- [subscribe](#md-subscribe)
-- [unsubscribe](#md-unsubscribe)
-
-Example
-- [getting started](#md-example-basic)
-- [Market Functions](#md-example-market)
-- [Orders and Trade](#md-example-orders)
-
-
 #### <a name="md-place_order"></a> place_order(buy_or_sell, product_type,exchange, tradingsymbol, quantity, discloseqty, price_type, price=0.0, trigger_price=None, retention='DAY', amo='NO', remarks=None)
 place an order to oms
 
