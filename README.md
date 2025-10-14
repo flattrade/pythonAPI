@@ -1637,6 +1637,64 @@ Sample Failure Response :
      "emsg":"Session Expired : Invalid Session Key"
 }
 
+#### <a name="md-get_daily_price_series"></a>get_daily_price_series(Symbol name, From date, To date):
+gets the chart date for the symbol
+
+Example:
+```
+ret =api.get_daily_price_series(exchange="NSE",tradingsymbol="PAYTM-EQ",startdate="457401600",enddate="480556800")
+```
+Request Details :
+
+|Python Parameters|Json Fields|Possible value|Description|
+| --- | --- | ---|
+|sym*||Symbol name|
+|from*||From date|
+|to*||To date |
+
+Response Details :
+
+|Json Fields|Possible value|Description|
+| --- | --- | ---|
+|stat|Ok|TPData success indication.|
+|time||DD/MM/CCYY hh:mm:ss|
+|into||Interval open|
+|inth||Interval high|
+|intl||Interval low|
+|intc||Interval close|
+|ssboe||Date,Seconds in 1970 format|
+|intv||Interval volume|
+
+Sample Success Response :
+[
+  "{
+       \"time\":\"21-SEP-2022\",
+       \"into\":\"2496.75\",
+       \"inth\":\"2533.00\",
+       \"intl\":\"2495.00\", 
+       \"intc\":\"2509.75\",
+       \"ssboe\":\"1663718400\",
+       \"intv\":\"4249172.00\"
+   }",
+ "{
+       \"time\":\"15-SEP-2022\",
+       \"into\":\"2583.00\",
+       \"inth\":\"2603.55\",
+       \"intl\":\"2556.75\",
+       \"intc\":\"2562.70\", 
+       \"ssboe\":\"1663200000\",
+       \"intv\":\"4783723.00\"
+  }",
+ "{ 	
+       \"time\":\"28-JUN-2021\",
+       \"into\":\"2122.00\",
+       \"inth\":\"2126.50\", 
+       \"intl\":\"2081.00\", 
+       \"intc\":\"2086.00\", 
+       \"ssboe\":\"1624838400\",
+        \"intv\":\"9357852.00\"
+  }"
+]
 
 #### <a name="md-get_optionchain"></a> get_option_chain(exchange, tradingsymbol, strikeprice, count):
 
